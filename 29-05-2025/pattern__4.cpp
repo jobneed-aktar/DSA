@@ -4,6 +4,9 @@ int main() {
 
 
     
+    /*
+        Inverted triangle pattern
+    */ 
     int n = 4;
     for(int i = 0; i < n; i++) {
         // Printing space
