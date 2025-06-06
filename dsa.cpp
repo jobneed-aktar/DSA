@@ -1,30 +1,27 @@
 #include <iostream>
-#include <climits>
 using namespace std;
-
-
-void reverseArr(int arr[], int size) {
-    int start = 0; 
-    int end = size -1;
-    while(start < end) {
-        swap(arr[start],arr[end]);
-        start++;
-        end--;
-    }
-}
-
+#include <climits>
 
 int main() {
-    int arr[] = {10,20,30,40,50};
-    int size = sizeof(arr) / sizeof(int);
-    reverseArr(arr,size);
+    
+    int minimumNumber = INT_MAX;
+    int nums[] = {10,20,30,-10,50,60,70,80,10,100};
+    int size = sizeof(nums) / sizeof(int);
 
-    for(int i = 0; i < size -1 ; i++) {
-       cout << arr[i] << endl;
+    for(int i=0; i<size; i++) {
+        if(nums[i]<minimumNumber) {
+            minimumNumber = i;
+        }
     }
-    
+
+    cout << "The smallest Number index number is : " << minimumNumber;
+
     
 
 
-    return 0;
+
+
+
+
+   return 0;
 }
