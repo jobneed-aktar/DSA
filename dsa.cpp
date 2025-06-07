@@ -2,25 +2,25 @@
 using namespace std;
 #include <climits>
 
+int linearSearch(int n[], int s,int f,int r) {
+   for(int i=0; i<s; i++) {
+      if(n[i]==f) {
+         return i;
+      }
+   }
+   return -1;
+}
+
+
+
 int main() {
-    
-    int minimumNumber = INT_MAX;
-    int nums[] = {10,20,30,-10,50,60,70,80,10,100};
-    int size = sizeof(nums) / sizeof(int);
+   int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+   int size = sizeof(numbers) / sizeof(int);
+   int find = 11;
+   int result;
+   
 
-    for(int i=0; i<size; i++) {
-        if(nums[i]<minimumNumber) {
-            minimumNumber = i;
-        }
-    }
-
-    cout << "The smallest Number index number is : " << minimumNumber;
-
-    
-
-
-
-
+   cout << linearSearch(numbers,size,find,result);
 
 
    return 0;
