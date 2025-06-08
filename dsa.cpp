@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
-#include <climits>
 
-int linearSearch(int n[], int s,int f,int r) {
-   for(int i=0; i<s; i++) {
-      if(n[i]==f) {
-         return i;
-      }
-   }
-   return -1;
+void reverse(int numbers[], int size) {
+    int start = 0;
+    int end = size-1;
+    while(start<end){
+        swap(numbers[start], numbers[end]);
+        start++;
+        end--;
+    }
 }
 
 
 
 int main() {
-   int numbers[] = {1,2,3,4,5,6,7,8,9,10};
-   int size = sizeof(numbers) / sizeof(int);
-   int find = 11;
-   int result;
-   
 
-   cout << linearSearch(numbers,size,find,result);
+    int numbers[] = {10,20,30,40,50,60,70,80,90,100};
+    int size = sizeof(numbers) / sizeof(int);
+    reverse(numbers,size);
+    
+    for(int i=0; i<size; i++) {
+        cout << numbers[i] << endl;
+    }
 
-
-   return 0;
+    return 0;
 }
